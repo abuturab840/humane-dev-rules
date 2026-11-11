@@ -1,6 +1,6 @@
 # The rules
 
-54 rules for building safe, secure, private, accessible and humane software, apps, websites and AI.
+60 rules for building safe, secure, private, accessible and humane software, apps, websites and AI.
 
 - **Always** rules apply to every project.
 - **Only if** rules switch on when the [intake questions](INTAKE.md) say they apply.
@@ -79,3 +79,11 @@ New here? Start with the [README](README.md). Not legal advice: see the [disclai
 52. **Always.** Check the wellbeing measure every month and fix whatever is hurting users.
 53. **Always.** Every quarter, review access and remove old accounts and keys. Every year, refresh the risk notes and threat model, and run an incident drill and a law check.
 54. **Always.** After any incident, write a short note covering what happened, why, and what changed, and track each fix until it's done.
+
+## J. Healthy engagement
+55. **Always.** Pass the Manipulation Matrix: only build what we'd use ourselves and what truly improves users' lives.
+56. **Always.** Apply the regret test in every dark pattern review. If users would regret a feature once they understood it, remove it.
+57. **Only if** it has rewards or gamification: rewards are earned and predictable; no random rewards designed to compel use.
+58. **Only if** users can invite others: they choose each person; never send automatic invites from uploaded contacts; rate-limit invites.
+59. **Only if** it's used regularly: give users controls such as quiet hours, a daily limit, snooze and optional usage summaries.
+60. **Only if** we show numbers or reviews: only real, current figures and genuine reviews; no fake urgency or scarcity.

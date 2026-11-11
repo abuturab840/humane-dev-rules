@@ -1,6 +1,6 @@
 # Humane Dev Rules
 
-**54 practical rules and a 22-point release checklist for building software, apps, websites and AI that are safe, secure, private, accessible and humane.**
+**60 practical rules and a 24-point release checklist for building software, apps, websites and AI that are safe, secure, private, accessible and humane.**
 
 Free to use, copy and adapt under [CC BY 4.0](LICENSE).
 
@@ -37,9 +37,9 @@ You can also hand the rules to an AI coding assistant. For example, add `RULES.m
 
 | File | What it is |
 |---|---|
-| [RULES.md](RULES.md) | The 54 rules, grouped A to I, each marked **Always** or **Only if** |
+| [RULES.md](RULES.md) | The 60 rules, grouped A to J, each marked **Always** or **Only if** |
 | [INTAKE.md](INTAKE.md) | Ten intake questions and the rules each one switches on |
-| [CHECKLIST.md](CHECKLIST.md) | The 22-point release checklist, ready to paste into a pull request |
+| [CHECKLIST.md](CHECKLIST.md) | The 24-point release checklist, ready to paste into a pull request |
 | [SOURCES.md](SOURCES.md) | The standards, laws and research the rules are based on |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | How to suggest fixes and improvements |
 
@@ -50,6 +50,7 @@ You can also hand the rules to an AI coding assistant. For example, add `RULES.m
 - **24.** Phishing-resistant MFA (passkeys or security keys) on all code, cloud and package accounts.
 - **29.** Every release gets an SBOM and a signature.
 - **36a.** Users who chat with AI see a small "AI" label.
+- **56.** If users would regret a feature once they understood it, remove it.
 - **49.** Fix actively exploited flaws within 72 hours, critical within 7 days.
 
 ## Disclaimer

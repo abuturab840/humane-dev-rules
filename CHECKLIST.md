@@ -7,6 +7,8 @@ Copy this list into your release notes or pull request and tick every item that 
 - [ ] Consequence Scan done and top risks handled.
 - [ ] Success measured by user benefit, not time spent.
 - [ ] Non-essential notifications off; no autoplay; stopping points in feeds.
+- [ ] Manipulation Matrix and regret test passed.
+- [ ] Rewards earned and predictable; invites chosen by users; user controls in place; only real numbers and reviews.
 
 **Private**
 - [ ] Only necessary data collected; delete dates set.

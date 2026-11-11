@@ -27,6 +27,11 @@ The rules draw on these standards, laws and research. Last reviewed November 202
 - Microsoft [Guidelines for Human-AI Interaction](https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/)
 - [C2PA Content Credentials](https://c2pa.org/)
 
+## Engagement
+- Nir Eyal, *Hooked* (2014) and *Indistractable* (2019); summaries by [Farnam Street](https://fs.blog/hooked/) and [Stanford GSB](https://www.gsb.stanford.edu/insights/super-power-tomorrow-being-indistractable)
+- Eyal on the regret test: [Behavioral Scientist](https://behavioralscientist.org/ask-behavioral-scientist-nir-eyal-regret-test-makes-good-ethics-good-business/), [Quartz](https://qz.com/1201171/nir-eyal-the-simple-test-that-can-determine-if-a-technology-is-for-good-or-evil)
+- [Big Think critique of variable rewards](https://bigthink.com/?p=54491)
+
 ## Accessibility
 - W3C [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
 

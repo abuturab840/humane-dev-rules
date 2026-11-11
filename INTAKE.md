@@ -15,7 +15,7 @@ Answer these at the start of every project (rule 1). Every **Always** rule appli
 | 9 | Is it a **mobile app** or installable **software product**? | 22 (MASVS for mobile), 47 (support period) |
 | 10 | Do users **log in**? | 13, 23, 33 (access control tests), 45 (terms) |
 
-Also apply, where the product has them: rule 6 (notifications), 7 (video or audio), 8 (feeds), 34 (major launch or product live a year).
+Also apply, where the product has them: rule 6 (notifications), 7 (video or audio), 8 (feeds), 34 (major launch or product live a year), 57 (rewards or gamification), 58 (invites), 59 (regular use), 60 (numbers or reviews).
 
 ## Tip
 
