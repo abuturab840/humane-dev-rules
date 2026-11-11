@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Contributing | Humane Dev Rules</title>
+<meta name="description" content="How to suggest a fix, a new rule or a translation.">
+<link rel="canonical" href="https://abuturab840.github.io/humane-dev-rules/contributing.html">
+<meta property="og:title" content="Contributing | Humane Dev Rules">
+<meta property="og:description" content="How to suggest a fix, a new rule or a translation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abuturab840.github.io/humane-dev-rules/contributing.html">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23E2262D'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial,sans-serif' font-size='19' font-weight='900' text-anchor='middle' fill='white'%3EH%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="cover">
+  <div class="inner">
+    <div class="topbar">
+      <a class="wordmark" href="index.html">Humane Dev Rules</a>
+      <nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="guide.html">How to use</a></li><li><a href="rules.html">Rules</a></li><li><a href="intake.html">Intake</a></li><li><a href="checklist.html">Checklist</a></li><li><a href="template.html">Template</a></li><li><a href="ai-tools.html">AI tools</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="sources.html">Sources</a></li></ul></nav>
+    </div>
+    <p class="kicker">Help improve it</p>
+    <h1>Contributing</h1>
+    <p class="lead">How to suggest a fix, a new rule or a translation.</p>
+    <div class="slit"></div>
+  </div>
+</header>
+<main class="wrap" id="main">
+<p>Suggestions are welcome, especially:</p>
+<ul>
+<li><strong>Law changes.</strong> A date moved, a new law passed, or a summary that's wrong. Please link the official source.</li>
+<li><strong>Clearer wording.</strong> Rules should be short, plain and testable.</li>
+<li><strong>Better tools or standards</strong> behind a rule.</li>
+<li><strong>Translations.</strong></li>
+</ul>
+<span class="pill" aria-hidden="true">01</span>
+<h2 id="how">How</h2>
+<ol>
+<li>Open an issue describing the change and why, with a source link if it's about law or a standard.</li>
+<li>Or send a pull request. Keep each pull request to one topic.</li>
+</ol>
+<span class="pill" aria-hidden="true">02</span>
+<h2 id="style">Style</h2>
+<ul>
+<li>One rule, one idea. Aim for a single sentence.</li>
+<li>Mark every rule <span class="tag t-always">Always</span> or <span class="tag t-onlyif">Only if</span>, with the condition.</li>
+<li>Plain English. Explain any acronym the first time it appears.</li>
+<li>No product endorsements unless the tool is free or a recognised standard.</li>
+</ul>
+<span class="pill" aria-hidden="true">03</span>
+<h2 id="the-website">The website</h2>
+<p>The website in the <code>docs</code> folder is built from the Markdown files in this repo, so please edit the <code>.md</code> files, not the HTML. To rebuild it:</p>
+<pre><code class="language-bash">python3 -m venv .venv
+.venv/bin/pip install -r tools/requirements.txt
+.venv/bin/python tools/build_site.py
+</code></pre>
+<p>By contributing, you agree your contribution is licensed under <a href="https://github.com/abuturab840/humane-dev-rules/blob/main/LICENSE">CC BY 4.0</a>.</p>
+</main>
+<footer class="foot">
+  <div class="inner">
+    <a class="wordmark" href="index.html">Humane Dev Rules</a>
+    <p>By abuturab840. Free to reuse under <a href="https://github.com/abuturab840/humane-dev-rules/blob/main/LICENSE">CC BY 4.0</a>. Not legal advice. Last reviewed November 2026.</p>
+    <p><a href="https://github.com/abuturab840/humane-dev-rules">View on GitHub</a> &middot; <a href="contributing.html">Contribute</a> &middot; <a href="accessibility.html">Accessibility</a> &middot; <a href="https://github.com/abuturab840/humane-dev-rules/issues">Report a problem</a></p>
+    <p>This site uses no cookies and no tracking.</p>
+  </div>
+</footer>
+</body>
+</html>

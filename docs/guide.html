@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>How to use these rules | Humane Dev Rules</title>
+<meta name="description" content="A step-by-step guide for anyone, with or without AI, and a worked example.">
+<link rel="canonical" href="https://abuturab840.github.io/humane-dev-rules/guide.html">
+<meta property="og:title" content="How to use these rules | Humane Dev Rules">
+<meta property="og:description" content="A step-by-step guide for anyone, with or without AI, and a worked example.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abuturab840.github.io/humane-dev-rules/guide.html">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23E2262D'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial,sans-serif' font-size='19' font-weight='900' text-anchor='middle' fill='white'%3EH%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="cover">
+  <div class="inner">
+    <div class="topbar">
+      <a class="wordmark" href="index.html">Humane Dev Rules</a>
+      <nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="guide.html" aria-current="page">How to use</a></li><li><a href="rules.html">Rules</a></li><li><a href="intake.html">Intake</a></li><li><a href="checklist.html">Checklist</a></li><li><a href="template.html">Template</a></li><li><a href="ai-tools.html">AI tools</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="sources.html">Sources</a></li></ul></nav>
+    </div>
+    <p class="kicker">Start here</p>
+    <h1>How to use these rules</h1>
+    <p class="lead">A step-by-step guide for anyone, with or without AI, and a worked example.</p>
+    <div class="slit"></div>
+  </div>
+</header>
+<main class="wrap" id="main">
+<p>This page is for anyone building a website, app or piece of software, with or without AI. You don't need to know the standards behind the rules. If a word is new to you, look it up in the <a href="glossary.html">glossary</a>.</p>
+<p>The short version: answer ten questions, write down which rules apply, keep them in mind while you build, and run the checklist before you release.</p>
+<span class="pill" aria-hidden="true">Step 1</span>
+<h2 id="step-1-answer-the-intake-questions"><span class="sr">Step 1: </span>Answer the intake questions</h2>
+<p>Open the <a href="intake.html">intake questions</a> and answer each one with yes or no. They ask things like "Do we collect personal data?" and "Could children use it?"</p>
+<p>Every rule is marked "Always" or "Only if". The "Always" rules apply to every project. Your yes answers switch on the "Only if" rules. That way a small site doesn't have to follow the rules meant for AI chatbots or children's apps.</p>
+<p>If you're not sure about an answer, say yes. You can drop the extra rules later.</p>
+<span class="pill" aria-hidden="true">Step 2</span>
+<h2 id="step-2-write-down-your-list"><span class="sr">Step 2: </span>Write down your list</h2>
+<p>Write your answers down somewhere you'll see them. The <a href="template.html">project template</a> has a place for everything the rules ask you to record:</p>
+<ul>
+<li>your intake answers and the rules that apply</li>
+<li>your Consequence Scan, threat model and wellbeing measure</li>
+<li>the data you collect and when it's deleted</li>
+<li>your cookies, security set-up and the pages you need to publish</li>
+<li>who handles incidents and data requests</li>
+<li>an after-launch calendar, a release log and any exceptions</li>
+</ul>
+<p>Copy it into a file in your project, such as <code>HUMANE.md</code>, or into your planning doc. Fill in the first four sections before you design anything, and the rest as you build.</p>
+<span class="pill" aria-hidden="true">Step 3</span>
+<h2 id="step-3-do-the-start-of-project-rules"><span class="sr">Step 3: </span>Do the start-of-project rules</h2>
+<p>Section A of the rules happens before you design anything. None of it needs special tools.</p>
+<ul>
+<li><strong>Consequence Scan (rule <span class="ref"><a href="rules.html#rule-2" aria-describedby="tip-1">2</a><span class="tip" role="tooltip" id="tip-1"><b>Rule 2.</b> Always. Before you design anything, think through who your product could harm and how. This is called a Consequence Scan. Fifteen minutes is enough for a small site or feature. Give it up to an hour if the product handles personal data, could be used by children or uses AI. Write down the biggest risks and how you&#x27;ll deal with each one.</span></span>).</strong> Sit down for 15 minutes and ask: who could this product hurt, and how? Think about misuse, mistakes, people left out, and what happens if it's very popular. Write down the top three risks and what you'll do about each one.</li>
+<li><strong>Threat model (rule <span class="ref"><a href="rules.html#rule-4" aria-describedby="tip-2">4</a><span class="tip" role="tooltip" id="tip-2"><b>Rule 4.</b> Always. Make a simple threat model. Write down what an attacker might want from your product, like customer data or admin access, and how you&#x27;ll stop them.</span></span>).</strong> Ask: what would an attacker want from this, and how would they try to get it? Customer details, admin access, free use of your servers? Write down how you'll stop each one.</li>
+<li><strong>Wellbeing measure (rule <span class="ref"><a href="rules.html#rule-5" aria-describedby="tip-3">5</a><span class="tip" role="tooltip" id="tip-3"><b>Rule 5.</b> Always. Pick one number that shows your product is really helping people, and track it. &quot;Time spent in the app&quot; is never the goal.</span></span>).</strong> Pick one number that shows the product is actually helping people. For a booking site it might be "bookings completed without needing to call us". Never use time spent as your goal.</li>
+</ul>
+<span class="pill" aria-hidden="true">Step 4</span>
+<h2 id="step-4-build-with-the-rules-open"><span class="sr">Step 4: </span>Build with the rules open</h2>
+<p>Keep the rules next to you while you work and check the right section when you get to it:</p>
+<ul>
+<li>Designing screens, sign-up or cancel flows? Section B (humane design) and J (healthy engagement).</li>
+<li>Adding a form, analytics or a cookie banner? Section C (privacy and cookies).</li>
+<li>Setting up hosting, logins or plugins? Section D (security).</li>
+<li>Adding AI? Section F.</li>
+</ul>
+<p>You don't need paid tools for most of it. Some free ones that help:</p>
+<ul>
+<li><strong>Accessibility:</strong> try using your site with only the keyboard, then with a screen reader (VoiceOver on Mac and iPhone, NVDA on Windows). The WAVE and axe browser extensions catch common problems.</li>
+<li><strong>Security:</strong> turn on GitHub's Dependabot and secret scanning, run Semgrep on your code, and check your live site with ZAP, securityheaders.com and SSL Labs.</li>
+<li><strong>Cookies:</strong> open your browser's developer tools and look at what loads before anyone clicks "Accept". Nothing optional should.</li>
+</ul>
+<p>On WordPress, every plugin counts as a dependency (rule <span class="ref"><a href="rules.html#rule-28" aria-describedby="tip-4">28</a><span class="tip" role="tooltip" id="tip-4"><b>Rule 28.</b> Always. Use as few outside packages and plugins as you can, pick well-maintained ones, and lock their versions in a lockfile.</span></span>). Fewer, well-maintained plugins are safer.</p>
+<span class="pill" aria-hidden="true">Step 5</span>
+<h2 id="step-5-run-the-checklist-before-every-release"><span class="sr">Step 5: </span>Run the checklist before every release</h2>
+<p>Copy the <a href="checklist.html">release checklist</a> into your release notes or pull request. Tick what's done, write "n/a" next to what doesn't apply, and fix anything that's left before you ship.</p>
+<p>If something can't be fixed in time, rule <span class="ref"><a href="rules.html#rule-35" aria-describedby="tip-5">35</a><span class="tip" role="tooltip" id="tip-5"><b>Rule 35.</b> Always. Never ship with a known critical or high security problem. If you really must make an exception, write down why and the date it runs out.</span></span> says to write down why and the date it will be fixed by. A serious security problem (critical or high) should never ship.</p>
+<span class="pill" aria-hidden="true">Step 6</span>
+<h2 id="step-6-keep-going-after-launch"><span class="sr">Step 6: </span>Keep going after launch</h2>
+<p>Section I covers life after launch. Put these in your calendar so you don't forget:</p>
+<ul>
+<li><strong>Every month:</strong> check your wellbeing measure (rule <span class="ref"><a href="rules.html#rule-52" aria-describedby="tip-6">52</a><span class="tip" role="tooltip" id="tip-6"><b>Rule 52.</b> Always. Check your wellbeing number from rule 5 every month, and fix whatever is hurting people.</span></span>).</li>
+<li><strong>Every quarter:</strong> remove old accounts and keys (rule <span class="ref"><a href="rules.html#rule-53" aria-describedby="tip-7">53</a><span class="tip" role="tooltip" id="tip-7"><b>Rule 53.</b> Always. Every three months, check who has access and remove old accounts and keys. Every year, update your risk notes and threat model, practise your incident plan and check for new laws.</span></span>) and, if you use optional cookies, run a cookie scan (rule <span class="ref"><a href="rules.html#rule-20" aria-describedby="tip-8">20</a><span class="tip" role="tooltip" id="tip-8"><b>Rule 20.</b> Only if you use optional cookies or tags: check every cookie your site sets every three months, and again whenever you add a plugin or tag.</span></span>).</li>
+<li><strong>Every year:</strong> refresh your risk notes and threat model, and check if any laws have changed (rule <span class="ref"><a href="rules.html#rule-53" aria-describedby="tip-9">53</a><span class="tip" role="tooltip" id="tip-9"><b>Rule 53.</b> Always. Every three months, check who has access and remove old accounts and keys. Every year, update your risk notes and threat model, practise your incident plan and check for new laws.</span></span>).</li>
+</ul>
+<span class="bar" aria-hidden="true"></span>
+<h2 id="an-example-a-small-booking-site">An example: a small booking site</h2>
+<p>Say you're building a booking site for a hair salon in the UK. Customers book online and pay a deposit. Staff log in to see the bookings.</p>
+<p>The intake answers:</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Personal data?</td>
+<td>Yes: names, phone numbers, emails</td>
+</tr>
+<tr>
+<td>2</td>
+<td>EU or UK users?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>US users?</td>
+<td>No</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Children?</td>
+<td>No</td>
+</tr>
+<tr>
+<td>5</td>
+<td>AI?</td>
+<td>No</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Payments?</td>
+<td>Yes: deposits through a payment provider</td>
+</tr>
+<tr>
+<td>7</td>
+<td>User posts?</td>
+<td>No</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Optional cookies or tracking?</td>
+<td>Yes: the owner wants Google Analytics</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Mobile app?</td>
+<td>No</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Users log in?</td>
+<td>Yes: staff only</td>
+</tr>
+</tbody>
+</table></div>
+<p>So on top of the "Always" rules, the salon site also follows the extra points for personal data, UK visitors with cookies, payments and logins. If it shows customer reviews, rule <span class="ref"><a href="rules.html#rule-60" aria-describedby="tip-10">60</a><span class="tip" role="tooltip" id="tip-10"><b>Rule 60.</b> Only if you show numbers or reviews: show only real, current figures and genuine reviews. No fake urgency like &quot;Only 2 left!&quot; unless it&#x27;s true.</span></span> applies too.</p>
+<p>What that means in practice:</p>
+<ul>
+<li><strong>Payments go through Stripe Checkout or similar</strong>, so the site never sees card numbers (rule <span class="ref"><a href="rules.html#rule-31" aria-describedby="tip-11">31</a><span class="tip" role="tooltip" id="tip-11"><b>Rule 31.</b> Only if you take payments: never store card details yourself. Use a payment provider.</span></span>).</li>
+<li><strong>Old bookings are deleted after 12 months</strong>, and customers can ask for their data or ask for it to be deleted (rules <span class="ref"><a href="rules.html#rule-12" aria-describedby="tip-12">12</a><span class="tip" role="tooltip" id="tip-12"><b>Rule 12.</b> Always. Only collect the data you really need, and decide when each type of data will be deleted.</span></span> and <span class="ref"><a href="rules.html#rule-14" aria-describedby="tip-13">14</a><span class="tip" role="tooltip" id="tip-13"><b>Rule 14.</b> Only if you hold personal data: let people see their data, download it and delete it.</span></span>).</li>
+<li><strong>Analytics don't load until the visitor clicks "Accept"</strong>, and "Reject all" sits right next to it, the same size (rules <span class="ref"><a href="rules.html#rule-15" aria-describedby="tip-14">15</a><span class="tip" role="tooltip" id="tip-14"><b>Rule 15.</b> Only if you have visitors from the EU or UK and use optional cookies or tracking tags: don&#x27;t load anything optional until the visitor says yes.</span></span> and <span class="ref"><a href="rules.html#rule-16" aria-describedby="tip-15">16</a><span class="tip" role="tooltip" id="tip-15"><b>Rule 16.</b> Only if you show a cookie banner: put &quot;Reject all&quot; and &quot;Accept all&quot; side by side on the first screen, looking exactly the same.</span></span>). Or the owner could switch to a cookie-free counter and skip the banner completely.</li>
+<li><strong>Cancelling a booking is as easy as making one</strong> (rule <span class="ref"><a href="rules.html#rule-9" aria-describedby="tip-16">9</a><span class="tip" role="tooltip" id="tip-16"><b>Rule 9.</b> Always. Make leaving as easy as joining. Cancelling, saying no and deleting an account should take no more effort than signing up, saying yes or creating one.</span></span>). No phone call needed.</li>
+<li><strong>Staff accounts can only see what they need</strong>, and the server checks it on every request (rule <span class="ref"><a href="rules.html#rule-23" aria-describedby="tip-17">23</a><span class="tip" role="tooltip" id="tip-17"><b>Rule 23.</b> Only if users log in: check on the server, every time, that the person is allowed to do what they&#x27;re asking. When in doubt, the answer is no.</span></span>).</li>
+<li><strong>Appointment reminders are fine</strong>, because they're essential. Marketing messages stay off unless the customer turns them on (rule <span class="ref"><a href="rules.html#rule-6" aria-describedby="tip-18">6</a><span class="tip" role="tooltip" id="tip-18"><b>Rule 6.</b> Only if your product sends notifications: keep them off by default, except essential ones like security alerts or booking reminders. Never use red badges to push marketing.</span></span>).</li>
+</ul>
+<span class="bar" aria-hidden="true"></span>
+<h2 id="if-you-work-alone">If you work alone</h2>
+<p>Most of this was written with small teams and solo developers in mind. A few tips:</p>
+<ul>
+<li>Start with the "Always" rules and the checklist. That covers most of the risk.</li>
+<li>Where a rule asks for a second person (rule <span class="ref"><a href="rules.html#rule-48" aria-describedby="tip-19">48</a><span class="tip" role="tooltip" id="tip-19"><b>Rule 48.</b> Always. The person doing the release goes through the release checklist and saves the result with the release. For big launches, a second person checks it too. Working alone? Check it again the next day with fresh eyes.</span></span>), check it yourself the next day with fresh eyes.</li>
+<li>Don't let a perfect checklist stop you from shipping. But don't ship with a known serious security hole either.</li>
+</ul>
+<span class="bar" aria-hidden="true"></span>
+<h2 id="when-a-rule-doesnt-fit">When a rule doesn't fit</h2>
+<p>The rules are a starting point, not a law. If one doesn't make sense for your project, write down why and move on. You're free to change them under the <a href="https://github.com/abuturab840/humane-dev-rules/blob/main/LICENSE">licence</a>. If you think a rule is wrong for everyone, please <a href="https://github.com/abuturab840/humane-dev-rules/issues">open an issue</a> so it can be fixed.</p>
+</main>
+<footer class="foot">
+  <div class="inner">
+    <a class="wordmark" href="index.html">Humane Dev Rules</a>
+    <p>By abuturab840. Free to reuse under <a href="https://github.com/abuturab840/humane-dev-rules/blob/main/LICENSE">CC BY 4.0</a>. Not legal advice. Last reviewed November 2026.</p>
+    <p><a href="https://github.com/abuturab840/humane-dev-rules">View on GitHub</a> &middot; <a href="contributing.html">Contribute</a> &middot; <a href="accessibility.html">Accessibility</a> &middot; <a href="https://github.com/abuturab840/humane-dev-rules/issues">Report a problem</a></p>
+    <p>This site uses no cookies and no tracking.</p>
+  </div>
+</footer>
+</body>
+</html>

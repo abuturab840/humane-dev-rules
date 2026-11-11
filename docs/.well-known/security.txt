@@ -1,0 +1,4 @@
+Contact: https://github.com/abuturab840/humane-dev-rules/issues
+Expires: 2027-11-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://abuturab840.github.io/humane-dev-rules/.well-known/security.txt

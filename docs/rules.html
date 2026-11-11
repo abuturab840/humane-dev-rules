@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>The rules | Humane Dev Rules</title>
+<meta name="description" content="Short rules for building websites, apps, software and AI that treat people well.">
+<link rel="canonical" href="https://abuturab840.github.io/humane-dev-rules/rules.html">
+<meta property="og:title" content="The rules | Humane Dev Rules">
+<meta property="og:description" content="Short rules for building websites, apps, software and AI that treat people well.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abuturab840.github.io/humane-dev-rules/rules.html">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23E2262D'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial,sans-serif' font-size='19' font-weight='900' text-anchor='middle' fill='white'%3EH%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="cover">
+  <div class="inner">
+    <div class="topbar">
+      <a class="wordmark" href="index.html">Humane Dev Rules</a>
+      <nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="guide.html">How to use</a></li><li><a href="rules.html" aria-current="page">Rules</a></li><li><a href="intake.html">Intake</a></li><li><a href="checklist.html">Checklist</a></li><li><a href="template.html">Template</a></li><li><a href="ai-tools.html">AI tools</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="sources.html">Sources</a></li></ul></nav>
+    </div>
+    <p class="kicker">60 rules in ten sections</p>
+    <h1>The rules</h1>
+    <p class="lead">Short rules for building websites, apps, software and AI that treat people well.</p>
+    <div class="slit"></div>
+  </div>
+</header>
+<main class="wrap" id="main">
+<p>Every rule has one of two labels:</p>
+<ul>
+<li><span class="tag t-always">Always</span> rules apply to every project, even a small one.</li>
+<li><span class="tag t-onlyif">Only if</span> rules apply when the condition is true for your project. The <a href="intake.html">intake questions</a> help you work out which ones those are.</li>
+</ul>
+<p>Some rules have an "Always" part and an "Only if" part. For example, rule <span class="ref"><a href="rules.html#rule-22" aria-describedby="tip-1">22</a><span class="tip" role="tooltip" id="tip-1"><b>Rule 22.</b> Always. Meet level 1 of OWASP&#x27;s security checklist for apps (ASVS). Only if you hold personal, health or payment data: meet level 2. Only if it&#x27;s a mobile app: also meet OWASP&#x27;s mobile checklist (MASVS).</span></span> asks every project for the basic security level, and a higher level only if you hold personal data.</p>
+<p>If a word is new to you, the <a href="glossary.html">glossary</a> explains it. If you're not sure how to start, read <a href="guide.html">how to use these rules</a> first. This isn't legal advice.</p>
+<span class="pill" aria-hidden="true">A</span>
+<h2 id="a-starting-a-project"><span class="sr">A. </span>Starting a project</h2>
+<p class="intro">Do these before you design anything. They take less time than you think and they save you from building the wrong thing.</p>
+<ol class="rules">
+<li id="rule-1"><span class="rn" aria-hidden="true">1</span><div><span class="sr">Rule&#160;1. </span><span class="tag t-always">Always</span> Answer the ten <a href="intake.html">intake questions</a> before you start. They ask things like "Does your product collect personal data?", "Could children use it?" and "Does it use AI?". Your answers show which "Only if" rules apply to you.</div></li>
+<li id="rule-2"><span class="rn" aria-hidden="true">2</span><div><span class="sr">Rule&#160;2. </span><span class="tag t-always">Always</span> Before you design anything, think through who your product could harm and how. This is called a Consequence Scan. Fifteen minutes is enough for a small site or feature. Give it up to an hour if the product handles personal data, could be used by children or uses AI. Write down the biggest risks and how you'll deal with each one.</div></li>
+<li id="rule-3"><span class="rn" aria-hidden="true">3</span><div><span class="sr">Rule&#160;3. </span><span class="tag t-onlyif">Only if</span> you handle personal data, especially health, biometric or payment data: write down the privacy risks and how you'll reduce them before you build. This is called a privacy risk assessment (DPIA).</div></li>
+<li id="rule-4"><span class="rn" aria-hidden="true">4</span><div><span class="sr">Rule&#160;4. </span><span class="tag t-always">Always</span> Make a simple threat model. Write down what an attacker might want from your product, like customer data or admin access, and how you'll stop them.</div></li>
+<li id="rule-5"><span class="rn" aria-hidden="true">5</span><div><span class="sr">Rule&#160;5. </span><span class="tag t-always">Always</span> Pick one number that shows your product is really helping people, and track it. "Time spent in the app" is never the goal.</div></li>
+</ol>
+
+<span class="pill" aria-hidden="true">B</span>
+<h2 id="b-humane-design"><span class="sr">B. </span>Humane design</h2>
+<p class="intro">How the product treats people's attention and choices.</p>
+<ol class="rules">
+<li id="rule-6"><span class="rn" aria-hidden="true">6</span><div><span class="sr">Rule&#160;6. </span><span class="tag t-onlyif">Only if</span> your product sends notifications: keep them off by default, except essential ones like security alerts or booking reminders. Never use red badges to push marketing.</div></li>
+<li id="rule-7"><span class="rn" aria-hidden="true">7</span><div><span class="sr">Rule&#160;7. </span><span class="tag t-onlyif">Only if</span> your product plays video or audio: don't play it automatically unless the user turns that on.</div></li>
+<li id="rule-8"><span class="rn" aria-hidden="true">8</span><div><span class="sr">Rule&#160;8. </span><span class="tag t-onlyif">Only if</span> your product has a feed: give it natural stopping points, like "You're all caught up". Never use endless scrolling for anyone under 18.</div></li>
+<li id="rule-9"><span class="rn" aria-hidden="true">9</span><div><span class="sr">Rule&#160;9. </span><span class="tag t-always">Always</span> Make leaving as easy as joining. Cancelling, saying no and deleting an account should take no more effort than signing up, saying yes or creating one.</div></li>
+<li id="rule-10"><span class="rn" aria-hidden="true">10</span><div><span class="sr">Rule&#160;10. </span><span class="tag t-always">Always</span> Don't use dark patterns, the design tricks that push people into things they didn't mean to do, and don't use guilt-trip wording like "No thanks, I don't like saving money". Check your screens against the examples at deceptive.design.</div></li>
+<li id="rule-11"><span class="rn" aria-hidden="true">11</span><div><span class="sr">Rule&#160;11. </span><span class="tag t-onlyif">Only if</span> your product ranks or recommends posts: reward the helpful ones, not the ones that make people angry.</div></li>
+</ol>
+
+<span class="pill" aria-hidden="true">C</span>
+<h2 id="c-privacy-and-cookies"><span class="sr">C. </span>Privacy and cookies</h2>
+<p class="intro">What data you collect, how long you keep it, and how you ask for consent.</p>
+<ol class="rules">
+<li id="rule-12"><span class="rn" aria-hidden="true">12</span><div><span class="sr">Rule&#160;12. </span><span class="tag t-always">Always</span> Only collect the data you really need, and decide when each type of data will be deleted.</div></li>
+<li id="rule-13"><span class="rn" aria-hidden="true">13</span><div><span class="sr">Rule&#160;13. </span><span class="tag t-onlyif">Only if</span> users have accounts: set every privacy option to the most private choice by default.</div></li>
+<li id="rule-14"><span class="rn" aria-hidden="true">14</span><div><span class="sr">Rule&#160;14. </span><span class="tag t-onlyif">Only if</span> you hold personal data: let people see their data, download it and delete it.</div></li>
+<li id="rule-15"><span class="rn" aria-hidden="true">15</span><div><span class="sr">Rule&#160;15. </span><span class="tag t-onlyif">Only if</span> you have visitors from the EU or UK and use optional cookies or tracking tags: don't load anything optional until the visitor says yes.</div></li>
+<li id="rule-16"><span class="rn" aria-hidden="true">16</span><div><span class="sr">Rule&#160;16. </span><span class="tag t-onlyif">Only if</span> you show a cookie banner: put "Reject all" and "Accept all" side by side on the first screen, looking exactly the same.</div></li>
+<li id="rule-17"><span class="rn" aria-hidden="true">17</span><div><span class="sr">Rule&#160;17. </span><span class="tag t-onlyif">Only if</span> you have visitors from the US and you sell or share their data or run targeted ads: respect Global Privacy Control, a browser setting that says "don't sell my data", and show a "Do Not Sell or Share" link.</div></li>
+<li id="rule-18"><span class="rn" aria-hidden="true">18</span><div><span class="sr">Rule&#160;18. </span><span class="tag t-onlyif">Only if</span> you have visitors from the US and use tracking: ad and analytics pixels follow rule <span class="ref"><a href="rules.html#rule-17" aria-describedby="tip-2">17</a><span class="tip" role="tooltip" id="tip-2"><b>Rule 17.</b> Only if you have visitors from the US and you sell or share their data or run targeted ads: respect Global Privacy Control, a browser setting that says &quot;don&#x27;t sell my data&quot;, and show a &quot;Do Not Sell or Share&quot; link.</span></span>. But never record visitors' screens (session replay) or chats without telling them and asking first, and never put ad pixels on sensitive pages, like health, money, children's or account pages.</div></li>
+<li id="rule-19"><span class="rn" aria-hidden="true">19</span><div><span class="sr">Rule&#160;19. </span><span class="tag t-onlyif">Only if</span> you use optional cookies: put a cookie settings link in every footer, and remember each visitor's choice for six months.</div></li>
+<li id="rule-20"><span class="rn" aria-hidden="true">20</span><div><span class="sr">Rule&#160;20. </span><span class="tag t-onlyif">Only if</span> you use optional cookies or tags: check every cookie your site sets every three months, and again whenever you add a plugin or tag.</div></li>
+</ol>
+
+<span class="pill" aria-hidden="true">D</span>
+<h2 id="d-security"><span class="sr">D. </span>Security</h2>
+<p class="intro">How you protect your users, your code and your accounts.</p>
+<ol class="rules">
+<li id="rule-21"><span class="rn" aria-hidden="true">21</span><div><span class="sr">Rule&#160;21. </span><span class="tag t-always">Always</span> Follow the good habits in NIST's Secure Software Development Framework (SSDF), a free US guide to building software securely.</div></li>
+<li id="rule-22"><span class="rn" aria-hidden="true">22</span><div><span class="sr">Rule&#160;22. </span><span class="tag t-always">Always</span> Meet level 1 of OWASP's security checklist for apps (ASVS). <span class="tag t-onlyif">Only if</span> you hold personal, health or payment data: meet level 2. <span class="tag t-onlyif">Only if</span> it's a mobile app: also meet OWASP's mobile checklist (MASVS).</div></li>
+<li id="rule-23"><span class="rn" aria-hidden="true">23</span><div><span class="sr">Rule&#160;23. </span><span class="tag t-onlyif">Only if</span> users log in: check on the server, every time, that the person is allowed to do what they're asking. When in doubt, the answer is no.</div></li>
+<li id="rule-24"><span class="rn" aria-hidden="true">24</span><div><span class="sr">Rule&#160;24. </span><span class="tag t-always">Always</span> Protect every account that touches your code, hosting or packages with a login that can't be phished, like passkeys or security keys.</div></li>
+<li id="rule-25"><span class="rn" aria-hidden="true">25</span><div><span class="sr">Rule&#160;25. </span><span class="tag t-always">Always</span> Never put passwords, keys or other secrets in your code or logs. Keep them in a secrets manager and use tokens that expire quickly.</div></li>
+<li id="rule-26"><span class="rn" aria-hidden="true">26</span><div><span class="sr">Rule&#160;26. </span><span class="tag t-always">Always</span> Encrypt all traffic with TLS 1.2 or newer, the padlock in the browser. <span class="tag t-onlyif">Only if</span> you store passwords or sensitive data: scramble passwords with Argon2 or bcrypt, and encrypt the data you store.</div></li>
+<li id="rule-27"><span class="rn" aria-hidden="true">27</span><div><span class="sr">Rule&#160;27. </span><span class="tag t-always">Always</span> Make the safe setting the default: debug mode off, security headers on, and any features you don't use switched off.</div></li>
+<li id="rule-28"><span class="rn" aria-hidden="true">28</span><div><span class="sr">Rule&#160;28. </span><span class="tag t-always">Always</span> Use as few outside packages and plugins as you can, pick well-maintained ones, and lock their versions in a lockfile.</div></li>
+<li id="rule-29"><span class="rn" aria-hidden="true">29</span><div><span class="sr">Rule&#160;29. </span><span class="tag t-always">Always</span> Give every release an SBOM, a list of everything inside it in CycloneDX or SPDX format, and a digital signature.</div></li>
+<li id="rule-30"><span class="rn" aria-hidden="true">30</span><div><span class="sr">Rule&#160;30. </span><span class="tag t-always">Always</span> Lock down how you build and deploy. Build in a clean, separate environment, and have a person approve every release to production.</div></li>
+<li id="rule-31"><span class="rn" aria-hidden="true">31</span><div><span class="sr">Rule&#160;31. </span><span class="tag t-onlyif">Only if</span> you take payments: never store card details yourself. Use a payment provider.</div></li>
+</ol>
+
+<span class="pill" aria-hidden="true">E</span>
+<h2 id="e-testing"><span class="sr">E. </span>Testing</h2>
+<p class="intro">The checks that prove the rules above are actually working.</p>
+<ol class="rules">
+<li id="rule-32"><span class="rn" aria-hidden="true">32</span><div><span class="sr">Rule&#160;32. </span><span class="tag t-always">Always</span> Scan every code change automatically: the code itself (SAST), the packages it uses (SCA), and for leaked secrets and unsafe settings.</div></li>
+<li id="rule-33"><span class="rn" aria-hidden="true">33</span><div><span class="sr">Rule&#160;33. </span><span class="tag t-always">Always</span> Before every release, run a security scan on the live site (DAST), an accessibility check and a dark pattern review. <span class="tag t-onlyif">Only if</span> users log in: also test that each type of user can only reach what they should. <span class="tag t-onlyif">Only if</span> you use tracking: also check your cookies.</div></li>
+<li id="rule-34"><span class="rn" aria-hidden="true">34</span><div><span class="sr">Rule&#160;34. </span><span class="tag t-onlyif">Only if</span> it's a big launch, or the product has been live for a year: get a penetration test, where an expert tries to break in. Also review your threat model and practise restoring from a backup.</div></li>
+<li id="rule-35"><span class="rn" aria-hidden="true">35</span><div><span class="sr">Rule&#160;35. </span><span class="tag t-always">Always</span> Never ship with a known critical or high security problem. If you really must make an exception, write down why and the date it runs out.</div></li>
+</ol>
+
+<span class="pill" aria-hidden="true">F</span>
+<h2 id="f-ai-features"><span class="sr">F. </span>AI features</h2>
+<p class="intro">Only for products that use AI. Skip this section if yours doesn't.</p>
+<ol class="rules">
+<li id="rule-36a"><span class="rn" aria-hidden="true">36a</span><div><span class="sr">Rule&#160;36a. </span><span class="tag t-onlyif">Only if</span> users chat with AI or read replies it writes: show a small "AI" label, unless that's already obvious, for example on a "Generate with AI" button.</div></li>
+<li id="rule-36b"><span class="rn" aria-hidden="true">36b</span><div><span class="sr">Rule&#160;36b. </span><span class="tag t-onlyif">Only if</span> your AI has a human form, like a face, a human name or a voice: say clearly at the start that it's AI, never let it claim to have feelings, and remind users during long chats.</div></li>
+<li id="rule-37"><span class="rn" aria-hidden="true">37</span><div><span class="sr">Rule&#160;37. </span><span class="tag t-onlyif">Only if</span> your AI makes images, audio or video: label them with C2PA Content Credentials, a tag inside the file that shows AI made it.</div></li>
+<li id="rule-38"><span class="rn" aria-hidden="true">38</span><div><span class="sr">Rule&#160;38. </span><span class="tag t-onlyif">Only if</span> you use AI: treat everything that goes into the AI as untrusted, and guard against the risks in OWASP's Top 10 for AI apps (the LLM Top 10).</div></li>
+<li id="rule-39"><span class="rn" aria-hidden="true">39</span><div><span class="sr">Rule&#160;39. </span><span class="tag t-onlyif">Only if</span> your AI can take actions: give it as little power as possible, and have a person approve anything that spends money, sends messages or deletes things.</div></li>
+<li id="rule-40"><span class="rn" aria-hidden="true">40</span><div><span class="sr">Rule&#160;40. </span><span class="tag t-onlyif">Only if</span> your AI's answers affect money, health, jobs or legal matters: have a person check them.</div></li>
+<li id="rule-41"><span class="rn" aria-hidden="true">41</span><div><span class="sr">Rule&#160;41. </span><span class="tag t-onlyif">Only if</span> you use AI: don't track people's moods, and don't use emotional pressure to keep them using it.</div></li>
+<li id="rule-42"><span class="rn" aria-hidden="true">42</span><div><span class="sr">Rule&#160;42. </span><span class="tag t-onlyif">Only if</span> you use AI: try hard to make it misbehave before launch and after any big change. This is called red-teaming.</div></li>
+</ol>
+
+<span class="pill" aria-hidden="true">G</span>
+<h2 id="g-children-and-accessibility"><span class="sr">G. </span>Children and accessibility</h2>
+<p class="intro">Making sure the product is safe for young people and usable by everyone, including disabled people.</p>
+<ol class="rules">
+<li id="rule-43"><span class="rn" aria-hidden="true">43</span><div><span class="sr">Rule&#160;43. </span><span class="tag t-onlyif">Only if</span> children might use it: use the safest settings by default. No profiling, location off, parental consent where the law needs it, and no addictive features.</div></li>
+<li id="rule-44"><span class="rn" aria-hidden="true">44</span><div><span class="sr">Rule&#160;44. </span><span class="tag t-always">Always</span> Meet the WCAG 2.2 AA accessibility standard, and test it using only a keyboard and with a screen reader.</div></li>
+</ol>
+
+<span class="pill" aria-hidden="true">H</span>
+<h2 id="h-launch"><span class="sr">H. </span>Launch</h2>
+<p class="intro">What needs to be in place on the day you go live.</p>
+<ol class="rules">
+<li id="rule-45"><span class="rn" aria-hidden="true">45</span><div><span class="sr">Rule&#160;45. </span><span class="tag t-always">Always</span> Publish an accessibility statement. <span class="tag t-onlyif">Only if</span> you hold personal data: publish a privacy notice. <span class="tag t-onlyif">Only if</span> you use cookies: publish a cookie policy. <span class="tag t-onlyif">Only if</span> you have accounts or payments: publish terms that explain clearly how to cancel.</div></li>
+<li id="rule-46"><span class="rn" aria-hidden="true">46</span><div><span class="sr">Rule&#160;46. </span><span class="tag t-always">Always</span> Publish a security.txt file and a short page explaining how people can report security problems to you.</div></li>
+<li id="rule-47"><span class="rn" aria-hidden="true">47</span><div><span class="sr">Rule&#160;47. </span><span class="tag t-onlyif">Only if</span> it's an app or software people install, not just a website: say how long you'll keep releasing security updates.</div></li>
+<li id="rule-48"><span class="rn" aria-hidden="true">48</span><div><span class="sr">Rule&#160;48. </span><span class="tag t-always">Always</span> The person doing the release goes through the <a href="checklist.html">release checklist</a> and saves the result with the release. For big launches, a second person checks it too. Working alone? Check it again the next day with fresh eyes.</div></li>
+</ol>
+
+<span class="pill" aria-hidden="true">I</span>
+<h2 id="i-after-launch"><span class="sr">I. </span>After launch</h2>
+<p class="intro">Keeping the product safe once people are using it.</p>
+<ol class="rules">
+<li id="rule-49"><span class="rn" aria-hidden="true">49</span><div><span class="sr">Rule&#160;49. </span><span class="tag t-always">Always</span> Fix security problems quickly: within 72 hours if they're being actively attacked, 7 days if critical, 30 days if high and 90 days if medium.</div></li>
+<li id="rule-50"><span class="rn" aria-hidden="true">50</span><div><span class="sr">Rule&#160;50. </span><span class="tag t-always">Always</span> Have a plan for security incidents. <span class="tag t-onlyif">Only if</span> you hold personal data: also have a plan for data breaches, including reporting them within 72 hours where the law requires it.</div></li>
+<li id="rule-51"><span class="rn" aria-hidden="true">51</span><div><span class="sr">Rule&#160;51. </span><span class="tag t-onlyif">Only if</span> you hold personal data: answer people's requests about their data within a month. <span class="tag t-onlyif">Only if</span> users can post content: remove reported intimate images within 48 hours.</div></li>
+<li id="rule-52"><span class="rn" aria-hidden="true">52</span><div><span class="sr">Rule&#160;52. </span><span class="tag t-always">Always</span> Check your wellbeing number from rule <span class="ref"><a href="rules.html#rule-5" aria-describedby="tip-3">5</a><span class="tip" role="tooltip" id="tip-3"><b>Rule 5.</b> Always. Pick one number that shows your product is really helping people, and track it. &quot;Time spent in the app&quot; is never the goal.</span></span> every month, and fix whatever is hurting people.</div></li>
+<li id="rule-53"><span class="rn" aria-hidden="true">53</span><div><span class="sr">Rule&#160;53. </span><span class="tag t-always">Always</span> Every three months, check who has access and remove old accounts and keys. Every year, update your risk notes and threat model, practise your incident plan and check for new laws.</div></li>
+<li id="rule-54"><span class="rn" aria-hidden="true">54</span><div><span class="sr">Rule&#160;54. </span><span class="tag t-always">Always</span> After any incident, write a short note covering what happened, why, and what you changed. Track each fix until it's done.</div></li>
+</ol>
+
+<span class="pill" aria-hidden="true">J</span>
+<h2 id="j-healthy-engagement"><span class="sr">J. </span>Healthy engagement</h2>
+<p class="intro">How to make a product people want to come back to, without hooking them. Rules <span class="ref"><a href="rules.html#rule-55" aria-describedby="tip-4">55</a><span class="tip" role="tooltip" id="tip-4"><b>Rule 55.</b> Always. Pass the Manipulation Matrix: only build something if you&#x27;d use it yourself and it truly makes people&#x27;s lives better.</span></span> and <span class="ref"><a href="rules.html#rule-56" aria-describedby="tip-5">56</a><span class="tip" role="tooltip" id="tip-5"><b>Rule 56.</b> Always. In every dark pattern review, ask the regret test question: would people regret using this feature if they understood how it works? If yes, remove it.</span></span> come from Nir Eyal's own ethics tests in <em>Hooked</em>.</p>
+<ol class="rules">
+<li id="rule-55"><span class="rn" aria-hidden="true">55</span><div><span class="sr">Rule&#160;55. </span><span class="tag t-always">Always</span> Pass the Manipulation Matrix: only build something if you'd use it yourself and it truly makes people's lives better.</div></li>
+<li id="rule-56"><span class="rn" aria-hidden="true">56</span><div><span class="sr">Rule&#160;56. </span><span class="tag t-always">Always</span> In every dark pattern review, ask the regret test question: would people regret using this feature if they understood how it works? If yes, remove it.</div></li>
+<li id="rule-57"><span class="rn" aria-hidden="true">57</span><div><span class="sr">Rule&#160;57. </span><span class="tag t-onlyif">Only if</span> your product has rewards, points or badges: make rewards earned and predictable. No random rewards designed to keep people hooked.</div></li>
+<li id="rule-58"><span class="rn" aria-hidden="true">58</span><div><span class="sr">Rule&#160;58. </span><span class="tag t-onlyif">Only if</span> users can invite others: let them choose each person. Never send automatic invites from uploaded contact lists, and limit how many invites can be sent.</div></li>
+<li id="rule-59"><span class="rn" aria-hidden="true">59</span><div><span class="sr">Rule&#160;59. </span><span class="tag t-onlyif">Only if</span> people use your product regularly: give them controls like quiet hours, a daily limit, snooze and optional usage summaries.</div></li>
+<li id="rule-60"><span class="rn" aria-hidden="true">60</span><div><span class="sr">Rule&#160;60. </span><span class="tag t-onlyif">Only if</span> you show numbers or reviews: show only real, current figures and genuine reviews. No fake urgency like "Only 2 left!" unless it's true.</div></li>
+</ol>
+</main>
+<footer class="foot">
+  <div class="inner">
+    <a class="wordmark" href="index.html">Humane Dev Rules</a>
+    <p>By abuturab840. Free to reuse under <a href="https://github.com/abuturab840/humane-dev-rules/blob/main/LICENSE">CC BY 4.0</a>. Not legal advice. Last reviewed November 2026.</p>
+    <p><a href="https://github.com/abuturab840/humane-dev-rules">View on GitHub</a> &middot; <a href="contributing.html">Contribute</a> &middot; <a href="accessibility.html">Accessibility</a> &middot; <a href="https://github.com/abuturab840/humane-dev-rules/issues">Report a problem</a></p>
+    <p>This site uses no cookies and no tracking.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Release checklist | Humane Dev Rules</title>
+<meta name="description" content="24 checks to run before you ship. Copy them into your release notes.">
+<link rel="canonical" href="https://abuturab840.github.io/humane-dev-rules/checklist.html">
+<meta property="og:title" content="Release checklist | Humane Dev Rules">
+<meta property="og:description" content="24 checks to run before you ship. Copy them into your release notes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abuturab840.github.io/humane-dev-rules/checklist.html">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23E2262D'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial,sans-serif' font-size='19' font-weight='900' text-anchor='middle' fill='white'%3EH%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="cover">
+  <div class="inner">
+    <div class="topbar">
+      <a class="wordmark" href="index.html">Humane Dev Rules</a>
+      <nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="guide.html">How to use</a></li><li><a href="rules.html">Rules</a></li><li><a href="intake.html">Intake</a></li><li><a href="checklist.html" aria-current="page">Checklist</a></li><li><a href="template.html">Template</a></li><li><a href="ai-tools.html">AI tools</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="sources.html">Sources</a></li></ul></nav>
+    </div>
+    <p class="kicker">Before every release</p>
+    <h1>Release checklist</h1>
+    <p class="lead">24 checks to run before you ship. Copy them into your release notes.</p>
+    <div class="slit"></div>
+  </div>
+</header>
+<main class="wrap" id="main">
+<p>Go through this list before every release (rule <span class="ref"><a href="rules.html#rule-48" aria-describedby="tip-1">48</a><span class="tip" role="tooltip" id="tip-1"><b>Rule 48.</b> Always. The person doing the release goes through the release checklist and saves the result with the release. For big launches, a second person checks it too. Working alone? Check it again the next day with fresh eyes.</span></span> in the <a href="rules.html">rules</a>).</p>
+<ol>
+<li>Copy the list into your release notes, pull request or a note you keep with the release.</li>
+<li>Tick each item that's done.</li>
+<li>Write "n/a" next to anything that doesn't apply to your project, for example the AI items on a site with no AI.</li>
+<li>If an item applies and isn't done, fix it before you ship. If you really can't, write down why and the date you'll fix it by (rule <span class="ref"><a href="rules.html#rule-35" aria-describedby="tip-2">35</a><span class="tip" role="tooltip" id="tip-2"><b>Rule 35.</b> Always. Never ship with a known critical or high security problem. If you really must make an exception, write down why and the date it runs out.</span></span>).</li>
+</ol>
+<p>Working alone? Run it again the next day with fresh eyes before a big launch.</p>
+<span class="pill" aria-hidden="true">01</span>
+<h2 id="humane">Humane</h2>
+<ul class="check">
+<li><label><input type="checkbox"> <span>A Consequence Scan is done, and the biggest risks are dealt with.</span></label></li>
+<li><label><input type="checkbox"> <span>Success is measured by how much the product helps people, not by time spent.</span></label></li>
+<li><label><input type="checkbox"> <span>Non-essential notifications are off by default, nothing plays automatically, and feeds have stopping points.</span></label></li>
+<li><label><input type="checkbox"> <span>The product passes the Manipulation Matrix and the regret test.</span></label></li>
+<li><label><input type="checkbox"> <span>Where they apply: rewards are earned and predictable, people choose who to invite, users have controls like quiet hours, and every number and review shown is real.</span></label></li>
+</ul>
+<span class="pill" aria-hidden="true">02</span>
+<h2 id="private">Private</h2>
+<ul class="check">
+<li><label><input type="checkbox"> <span>Only the data you need is collected, and each type has a delete date.</span></label></li>
+<li><label><input type="checkbox"> <span>The cookie check is clean. "Reject all" works and looks the same as "Accept all". The browser's "don't sell my data" signal (GPC) is respected where the law requires it.</span></label></li>
+<li><label><input type="checkbox"> <span>People can see, download and delete their data.</span></label></li>
+<li><label><input type="checkbox"> <span>A privacy notice and a cookie policy are published.</span></label></li>
+</ul>
+<span class="pill" aria-hidden="true">03</span>
+<h2 id="secure">Secure</h2>
+<ul class="check">
+<li><label><input type="checkbox"> <span>The right OWASP security level is met (ASVS, or MASVS for mobile apps), with no known critical or high problems left.</span></label></li>
+<li><label><input type="checkbox"> <span>The automatic scans have passed: code, packages, secrets and settings.</span></label></li>
+<li><label><input type="checkbox"> <span>Access has been tested for every type of user.</span></label></li>
+<li><label><input type="checkbox"> <span>The release has a list of what's inside it (SBOM) and a digital signature.</span></label></li>
+<li><label><input type="checkbox"> <span>security.txt is live, and the incident and data breach plans are ready.</span></label></li>
+<li><label><input type="checkbox"> <span>For a big launch, a penetration test is done.</span></label></li>
+</ul>
+<span class="pill" aria-hidden="true">04</span>
+<h2 id="fair-and-accessible">Fair and accessible</h2>
+<ul class="check">
+<li><label><input type="checkbox"> <span>There are no dark patterns. Cancelling and deleting are as easy as signing up.</span></label></li>
+<li><label><input type="checkbox"> <span>The WCAG 2.2 AA accessibility check has passed, including tests with a keyboard and a screen reader.</span></label></li>
+<li><label><input type="checkbox"> <span>If children might use it, the safest settings are on by default.</span></label></li>
+</ul>
+<span class="pill" aria-hidden="true">05</span>
+<h2 id="accountable">Accountable</h2>
+<ul class="check">
+<li><label><input type="checkbox"> <span>AI is labelled where rules <span class="ref"><a href="rules.html#rule-36a" aria-describedby="tip-3">36a</a><span class="tip" role="tooltip" id="tip-3"><b>Rule 36a.</b> Only if users chat with AI or read replies it writes: show a small &quot;AI&quot; label, unless that&#x27;s already obvious, for example on a &quot;Generate with AI&quot; button.</span></span> and <span class="ref"><a href="rules.html#rule-36b" aria-describedby="tip-4">36b</a><span class="tip" role="tooltip" id="tip-4"><b>Rule 36b.</b> Only if your AI has a human form, like a face, a human name or a voice: say clearly at the start that it&#x27;s AI, never let it claim to have feelings, and remind users during long chats.</span></span> apply, and images, audio and video made by AI are labelled.</span></label></li>
+<li><label><input type="checkbox"> <span>The AI security checks (OWASP LLM Top 10) and red-teaming have passed.</span></label></li>
+<li><label><input type="checkbox"> <span>A person checks AI decisions about money, health, jobs or legal matters.</span></label></li>
+<li><label><input type="checkbox"> <span>There's a working way for people to report illegal content and ask for takedowns.</span></label></li>
+<li><label><input type="checkbox"> <span>You've said how long you'll provide security updates.</span></label></li>
+<li><label><input type="checkbox"> <span>The person doing the release has signed it off (plus a second reviewer for big launches), and the result is saved with the release.</span></label></li>
+</ul>
+</main>
+<footer class="foot">
+  <div class="inner">
+    <a class="wordmark" href="index.html">Humane Dev Rules</a>
+    <p>By abuturab840. Free to reuse under <a href="https://github.com/abuturab840/humane-dev-rules/blob/main/LICENSE">CC BY 4.0</a>. Not legal advice. Last reviewed November 2026.</p>
+    <p><a href="https://github.com/abuturab840/humane-dev-rules">View on GitHub</a> &middot; <a href="contributing.html">Contribute</a> &middot; <a href="accessibility.html">Accessibility</a> &middot; <a href="https://github.com/abuturab840/humane-dev-rules/issues">Report a problem</a></p>
+    <p>This site uses no cookies and no tracking.</p>
+  </div>
+</footer>
+</body>
+</html>

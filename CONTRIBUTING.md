@@ -19,4 +19,14 @@ Suggestions are welcome, especially:
 - Plain English. Explain any acronym the first time it appears.
 - No product endorsements unless the tool is free or a recognised standard.
 
+## The website
+
+The website in the `docs` folder is built from the Markdown files in this repo, so please edit the `.md` files, not the HTML. To rebuild it:
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r tools/requirements.txt
+.venv/bin/python tools/build_site.py
+```
+
 By contributing, you agree your contribution is licensed under [CC BY 4.0](LICENSE).

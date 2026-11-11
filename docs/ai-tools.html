@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Using these rules with AI tools | Humane Dev Rules</title>
+<meta name="description" content="How to give these rules to Claude Code, Cursor, GitHub Copilot and other assistants.">
+<link rel="canonical" href="https://abuturab840.github.io/humane-dev-rules/ai-tools.html">
+<meta property="og:title" content="Using these rules with AI tools | Humane Dev Rules">
+<meta property="og:description" content="How to give these rules to Claude Code, Cursor, GitHub Copilot and other assistants.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abuturab840.github.io/humane-dev-rules/ai-tools.html">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23E2262D'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial,sans-serif' font-size='19' font-weight='900' text-anchor='middle' fill='white'%3EH%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="cover">
+  <div class="inner">
+    <div class="topbar">
+      <a class="wordmark" href="index.html">Humane Dev Rules</a>
+      <nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="guide.html">How to use</a></li><li><a href="rules.html">Rules</a></li><li><a href="intake.html">Intake</a></li><li><a href="checklist.html">Checklist</a></li><li><a href="template.html">Template</a></li><li><a href="ai-tools.html" aria-current="page">AI tools</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="sources.html">Sources</a></li></ul></nav>
+    </div>
+    <p class="kicker">For AI users</p>
+    <h1>Using these rules with AI tools</h1>
+    <p class="lead">How to give these rules to Claude Code, Cursor, GitHub Copilot and other assistants.</p>
+    <div class="slit"></div>
+  </div>
+</header>
+<main class="wrap" id="main">
+<p>AI coding assistants read instruction files in your project. If you put these rules in one of those files, the assistant follows them while it writes code and can warn you before it breaks one.</p>
+<p>This page shows you how to set that up for the common tools. If you don't use AI, you can skip it. The rules work the same way without it, as <a href="guide.html">how to use these rules</a> explains.</p>
+<span class="bar" aria-hidden="true"></span>
+<h2 id="two-things-to-know-first">Two things to know first</h2>
+<ul>
+<li><strong>The AI can still get it wrong.</strong> It may miss a rule or say something passes when it doesn't. A person still goes through the checklist and signs off each release.</li>
+<li><strong>Never paste secrets or personal data into an AI chat.</strong> That means passwords, API keys, or your users' details (rule <span class="ref"><a href="rules.html#rule-25" aria-describedby="tip-1">25</a><span class="tip" role="tooltip" id="tip-1"><b>Rule 25.</b> Always. Never put passwords, keys or other secrets in your code or logs. Keep them in a secrets manager and use tokens that expire quickly.</span></span>).</li>
+</ul>
+<span class="pill" aria-hidden="true">Step 1</span>
+<h2 id="step-1-put-a-copy-of-the-rules-in-your-project"><span class="sr">Step 1: </span>Put a copy of the rules in your project</h2>
+<p>Save <a href="rules.html">RULES.md</a> into your project, for example as <code>docs/humane-dev-rules.md</code>. You can download it from GitHub, or run this in your project folder:</p>
+<pre><code class="language-bash">mkdir -p docs
+curl -o docs/humane-dev-rules.md https://raw.githubusercontent.com/abuturab840/humane-dev-rules/main/RULES.md
+</code></pre>
+<p>Your copy won't update by itself. Check back here now and then for changes.</p>
+<span class="pill" aria-hidden="true">Step 2</span>
+<h2 id="step-2-point-your-ai-tool-at-it"><span class="sr">Step 2: </span>Point your AI tool at it</h2>
+<p>Each tool reads a different file. Pick yours.</p>
+<h3 id="claude-code">Claude Code</h3>
+<p>Create a file called <code>CLAUDE.md</code> in your project's main folder (or open it if it's already there) and add:</p>
+<pre><code>@docs/humane-dev-rules.md
+</code></pre>
+<p>The <code>@</code> line tells Claude Code to read the rules file. To use the rules on every project on your computer, put the same line in <code>~/.claude/CLAUDE.md</code> instead, with the full path to your copy.</p>
+<h3 id="cursor">Cursor</h3>
+<p>Create a file at <code>.cursor/rules/humane-dev-rules.mdc</code> with this at the top, then paste the rules underneath:</p>
+<pre><code>---
+description: Humane Dev Rules
+alwaysApply: true
+---
+</code></pre>
+<h3 id="github-copilot">GitHub Copilot</h3>
+<p>Create a file at <code>.github/copilot-instructions.md</code> and paste the rules into it. Copilot reads this file for chat and code suggestions in that repository.</p>
+<h3 id="other-tools">Other tools</h3>
+<p>Many other assistants, including OpenAI's Codex, read a file called <code>AGENTS.md</code> in your project's main folder. Paste the rules in there. If your tool uses a different file, its documentation will say which.</p>
+<h3 id="chat-assistants-claude-chatgpt-and-others">Chat assistants (Claude, ChatGPT and others)</h3>
+<p>If you plan in a chat app rather than in your code editor, add the rules file to a project's files or knowledge, so every chat in that project can see it. Or paste the rules at the start of a new chat.</p>
+<span class="pill" aria-hidden="true">Step 3</span>
+<h2 id="step-3-tell-it-how-to-use-them"><span class="sr">Step 3: </span>Tell it how to use them</h2>
+<p>The rules alone aren't enough. Tell the assistant what to do with them. Paste this under the rules, in the same file:</p>
+<pre><code>How to use these rules:
+- At the start of a new project or a big new feature, ask me the intake questions and tell me which &quot;Only if&quot; rules apply.
+- If something I ask for would break a rule, tell me which rule and why, and ask me before you do it.
+- Before a release, go through the release checklist. Mark each item pass, fail or n/a, with a short reason.
+- Never put secrets in code or logs.
+</code></pre>
+<span class="bar" aria-hidden="true"></span>
+<h2 id="prompts-you-can-use">Prompts you can use</h2>
+<p>Copy these into your assistant when you need them:</p>
+<ul>
+<li>"Answer the intake questions for this project from the code. Ask me about anything you can't tell."</li>
+<li>"Fill in the project template (TEMPLATE.md) for this project from the code. Leave a question for anything you can't tell."</li>
+<li>"Do a 15-minute Consequence Scan of this feature with me. What could go wrong, and for whom?"</li>
+<li>"Check this sign-up and cancel flow against rules <span class="ref"><a href="rules.html#rule-9" aria-describedby="tip-2">9</a><span class="tip" role="tooltip" id="tip-2"><b>Rule 9.</b> Always. Make leaving as easy as joining. Cancelling, saying no and deleting an account should take no more effort than signing up, saying yes or creating one.</span></span>, <span class="ref"><a href="rules.html#rule-10" aria-describedby="tip-3">10</a><span class="tip" role="tooltip" id="tip-3"><b>Rule 10.</b> Always. Don&#x27;t use dark patterns, the design tricks that push people into things they didn&#x27;t mean to do, and don&#x27;t use guilt-trip wording like &quot;No thanks, I don&#x27;t like saving money&quot;. Check your screens against the examples at deceptive.design.</span></span> and <span class="ref"><a href="rules.html#rule-56" aria-describedby="tip-4">56</a><span class="tip" role="tooltip" id="tip-4"><b>Rule 56.</b> Always. In every dark pattern review, ask the regret test question: would people regret using this feature if they understood how it works? If yes, remove it.</span></span>. Point out anything that could be a dark pattern."</li>
+<li>"Check our cookie banner against rules <span class="ref"><a href="rules.html#rule-15" aria-describedby="tip-5">15</a><span class="tip" role="tooltip" id="tip-5"><b>Rule 15.</b> Only if you have visitors from the EU or UK and use optional cookies or tracking tags: don&#x27;t load anything optional until the visitor says yes.</span></span>, <span class="ref"><a href="rules.html#rule-16" aria-describedby="tip-6">16</a><span class="tip" role="tooltip" id="tip-6"><b>Rule 16.</b> Only if you show a cookie banner: put &quot;Reject all&quot; and &quot;Accept all&quot; side by side on the first screen, looking exactly the same.</span></span> and <span class="ref"><a href="rules.html#rule-19" aria-describedby="tip-7">19</a><span class="tip" role="tooltip" id="tip-7"><b>Rule 19.</b> Only if you use optional cookies: put a cookie settings link in every footer, and remember each visitor&#x27;s choice for six months.</span></span>."</li>
+<li>"Review this change for security problems. Check permissions (rule <span class="ref"><a href="rules.html#rule-23" aria-describedby="tip-8">23</a><span class="tip" role="tooltip" id="tip-8"><b>Rule 23.</b> Only if users log in: check on the server, every time, that the person is allowed to do what they&#x27;re asking. When in doubt, the answer is no.</span></span>), secrets (rule <span class="ref"><a href="rules.html#rule-25" aria-describedby="tip-9">25</a><span class="tip" role="tooltip" id="tip-9"><b>Rule 25.</b> Always. Never put passwords, keys or other secrets in your code or logs. Keep them in a secrets manager and use tokens that expire quickly.</span></span>) and dependencies (rule <span class="ref"><a href="rules.html#rule-28" aria-describedby="tip-10">28</a><span class="tip" role="tooltip" id="tip-10"><b>Rule 28.</b> Always. Use as few outside packages and plugins as you can, pick well-maintained ones, and lock their versions in a lockfile.</span></span>)."</li>
+<li>"Go through the release checklist for this release. Mark each item pass, fail or n/a, and explain any fail."</li>
+</ul>
+<span class="bar" aria-hidden="true"></span>
+<h2 id="if-youre-adding-ai-to-your-own-product">If you're adding AI to your own product</h2>
+<p>That's a different thing from using AI to write code. If your product has AI features, such as a chatbot or AI-written replies, section F of the rules applies. It covers labelling AI, treating its input as untrusted, limiting what it can do, and testing it before launch (rules <span class="ref"><a href="rules.html#rule-36a" aria-describedby="tip-11">36a</a><span class="tip" role="tooltip" id="tip-11"><b>Rule 36a.</b> Only if users chat with AI or read replies it writes: show a small &quot;AI&quot; label, unless that&#x27;s already obvious, for example on a &quot;Generate with AI&quot; button.</span></span> to <span class="ref"><a href="rules.html#rule-42" aria-describedby="tip-12">42</a><span class="tip" role="tooltip" id="tip-12"><b>Rule 42.</b> Only if you use AI: try hard to make it misbehave before launch and after any big change. This is called red-teaming.</span></span>).</p>
+</main>
+<footer class="foot">
+  <div class="inner">
+    <a class="wordmark" href="index.html">Humane Dev Rules</a>
+    <p>By abuturab840. Free to reuse under <a href="https://github.com/abuturab840/humane-dev-rules/blob/main/LICENSE">CC BY 4.0</a>. Not legal advice. Last reviewed November 2026.</p>
+    <p><a href="https://github.com/abuturab840/humane-dev-rules">View on GitHub</a> &middot; <a href="contributing.html">Contribute</a> &middot; <a href="accessibility.html">Accessibility</a> &middot; <a href="https://github.com/abuturab840/humane-dev-rules/issues">Report a problem</a></p>
+    <p>This site uses no cookies and no tracking.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+Fonts used on the website
+
+Archivo, by Omnibus-Type. Copyright 2016 The Archivo Project Authors.
+Inter, by Rasmus Andersson. Copyright 2016 The Inter Project Authors.
+
+Both fonts are licensed under the SIL Open Font License, Version 1.1.
+Full licence text: https://openfontlicense.org/open-font-license-official-text/
+
+The font files here are the Latin subsets in WOFF2 format, as published by Fontsource.
+The CC BY 4.0 licence of this repo does not apply to these font files.

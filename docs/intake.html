@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Intake questions | Humane Dev Rules</title>
+<meta name="description" content="Ten yes-or-no questions that tell you which rules apply to your project.">
+<link rel="canonical" href="https://abuturab840.github.io/humane-dev-rules/intake.html">
+<meta property="og:title" content="Intake questions | Humane Dev Rules">
+<meta property="og:description" content="Ten yes-or-no questions that tell you which rules apply to your project.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://abuturab840.github.io/humane-dev-rules/intake.html">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23E2262D'/%3E%3Ctext x='16' y='23' font-family='Arial Black,Arial,sans-serif' font-size='19' font-weight='900' text-anchor='middle' fill='white'%3EH%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="cover">
+  <div class="inner">
+    <div class="topbar">
+      <a class="wordmark" href="index.html">Humane Dev Rules</a>
+      <nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="guide.html">How to use</a></li><li><a href="rules.html">Rules</a></li><li><a href="intake.html" aria-current="page">Intake</a></li><li><a href="checklist.html">Checklist</a></li><li><a href="template.html">Template</a></li><li><a href="ai-tools.html">AI tools</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="sources.html">Sources</a></li></ul></nav>
+    </div>
+    <p class="kicker">Step 1</p>
+    <h1>Intake questions</h1>
+    <p class="lead">Ten yes-or-no questions that tell you which rules apply to your project.</p>
+    <div class="slit"></div>
+  </div>
+</header>
+<main class="wrap" id="main">
+<p>Answer these ten questions when you start a project. It takes about five minutes.</p>
+<p>The "Always" rules apply to every project, whatever you answer. Each "yes" below adds a few more things to do. They're listed under each question in plain words. On the website, point at a rule number to see the full rule.</p>
+<p>If you're not sure of an answer, say yes for now. It's easier to drop something later than to add it after launch.</p>
+<span class="pill" aria-hidden="true">01</span>
+<h2 id="do-you-collect-or-store-personal-data">Do you collect or store personal data?</h2>
+<p>Personal data is anything that can identify a person, like a name, email address, phone number or IP address. A simple contact form counts.</p>
+<p>If yes:</p>
+<ul>
+<li>Let people see, download and delete their data (rule <span class="ref"><a href="rules.html#rule-14" aria-describedby="tip-1">14</a><span class="tip" role="tooltip" id="tip-1"><b>Rule 14.</b> Only if you hold personal data: let people see their data, download it and delete it.</span></span>).</li>
+<li>Use the higher security level (rule <span class="ref"><a href="rules.html#rule-22" aria-describedby="tip-2">22</a><span class="tip" role="tooltip" id="tip-2"><b>Rule 22.</b> Always. Meet level 1 of OWASP&#x27;s security checklist for apps (ASVS). Only if you hold personal, health or payment data: meet level 2. Only if it&#x27;s a mobile app: also meet OWASP&#x27;s mobile checklist (MASVS).</span></span>).</li>
+<li>Scramble stored passwords and encrypt sensitive data (rule <span class="ref"><a href="rules.html#rule-26" aria-describedby="tip-3">26</a><span class="tip" role="tooltip" id="tip-3"><b>Rule 26.</b> Always. Encrypt all traffic with TLS 1.2 or newer, the padlock in the browser. Only if you store passwords or sensitive data: scramble passwords with Argon2 or bcrypt, and encrypt the data you store.</span></span>).</li>
+<li>Publish a privacy notice that explains what you collect and why (rule <span class="ref"><a href="rules.html#rule-45" aria-describedby="tip-4">45</a><span class="tip" role="tooltip" id="tip-4"><b>Rule 45.</b> Always. Publish an accessibility statement. Only if you hold personal data: publish a privacy notice. Only if you use cookies: publish a cookie policy. Only if you have accounts or payments: publish terms that explain clearly how to cancel.</span></span>).</li>
+<li>Have a plan for data leaks, including who you tell and how fast (rule <span class="ref"><a href="rules.html#rule-50" aria-describedby="tip-5">50</a><span class="tip" role="tooltip" id="tip-5"><b>Rule 50.</b> Always. Have a plan for security incidents. Only if you hold personal data: also have a plan for data breaches, including reporting them within 72 hours where the law requires it.</span></span>).</li>
+<li>Answer people's requests about their data within a month (rule <span class="ref"><a href="rules.html#rule-51" aria-describedby="tip-6">51</a><span class="tip" role="tooltip" id="tip-6"><b>Rule 51.</b> Only if you hold personal data: answer people&#x27;s requests about their data within a month. Only if users can post content: remove reported intimate images within 48 hours.</span></span>).</li>
+<li>If it's health, fingerprint, face or payment data, do a written privacy risk check before you build (rule <span class="ref"><a href="rules.html#rule-3" aria-describedby="tip-7">3</a><span class="tip" role="tooltip" id="tip-7"><b>Rule 3.</b> Only if you handle personal data, especially health, biometric or payment data: write down the privacy risks and how you&#x27;ll reduce them before you build. This is called a privacy risk assessment (DPIA).</span></span>).</li>
+</ul>
+<span class="pill" aria-hidden="true">02</span>
+<h2 id="do-you-have-visitors-from-the-eu-or-uk">Do you have visitors from the EU or UK?</h2>
+<p>If yes, and you use optional cookies, analytics or tracking tags:</p>
+<ul>
+<li>Don't load anything optional until the visitor says yes (rule <span class="ref"><a href="rules.html#rule-15" aria-describedby="tip-8">15</a><span class="tip" role="tooltip" id="tip-8"><b>Rule 15.</b> Only if you have visitors from the EU or UK and use optional cookies or tracking tags: don&#x27;t load anything optional until the visitor says yes.</span></span>).</li>
+<li>Put "Reject all" right next to "Accept all", the same size and style (rule <span class="ref"><a href="rules.html#rule-16" aria-describedby="tip-9">16</a><span class="tip" role="tooltip" id="tip-9"><b>Rule 16.</b> Only if you show a cookie banner: put &quot;Reject all&quot; and &quot;Accept all&quot; side by side on the first screen, looking exactly the same.</span></span>).</li>
+<li>Add a cookie settings link to your footer, and remember each choice for six months (rule <span class="ref"><a href="rules.html#rule-19" aria-describedby="tip-10">19</a><span class="tip" role="tooltip" id="tip-10"><b>Rule 19.</b> Only if you use optional cookies: put a cookie settings link in every footer, and remember each visitor&#x27;s choice for six months.</span></span>).</li>
+<li>Check your cookies every three months, and each time you add a plugin or tag (rule <span class="ref"><a href="rules.html#rule-20" aria-describedby="tip-11">20</a><span class="tip" role="tooltip" id="tip-11"><b>Rule 20.</b> Only if you use optional cookies or tags: check every cookie your site sets every three months, and again whenever you add a plugin or tag.</span></span>).</li>
+</ul>
+<span class="pill" aria-hidden="true">03</span>
+<h2 id="do-you-have-visitors-from-the-us">Do you have visitors from the US?</h2>
+<p>If yes:</p>
+<ul>
+<li>If you sell or share visitors' data or run targeted ads, respect the browser's "don't sell my data" signal and add a "Do Not Sell or Share" link (rule <span class="ref"><a href="rules.html#rule-17" aria-describedby="tip-12">17</a><span class="tip" role="tooltip" id="tip-12"><b>Rule 17.</b> Only if you have visitors from the US and you sell or share their data or run targeted ads: respect Global Privacy Control, a browser setting that says &quot;don&#x27;t sell my data&quot;, and show a &quot;Do Not Sell or Share&quot; link.</span></span>).</li>
+<li>If you track visitors, don't record their screens or chats without asking first, and don't put ad tracking on sensitive pages like health, money or account pages (rule <span class="ref"><a href="rules.html#rule-18" aria-describedby="tip-13">18</a><span class="tip" role="tooltip" id="tip-13"><b>Rule 18.</b> Only if you have visitors from the US and use tracking: ad and analytics pixels follow rule 17. But never record visitors&#x27; screens (session replay) or chats without telling them and asking first, and never put ad pixels on sensitive pages, like health, money, children&#x27;s or account pages.</span></span>).</li>
+</ul>
+<span class="pill" aria-hidden="true">04</span>
+<h2 id="could-children-use-it">Could children use it?</h2>
+<p>If yes:</p>
+<ul>
+<li>Don't use endless feeds for anyone under 18 (rule <span class="ref"><a href="rules.html#rule-8" aria-describedby="tip-14">8</a><span class="tip" role="tooltip" id="tip-14"><b>Rule 8.</b> Only if your product has a feed: give it natural stopping points, like &quot;You&#x27;re all caught up&quot;. Never use endless scrolling for anyone under 18.</span></span>).</li>
+<li>Use the safest settings by default: no profiling, location off, parental consent where the law needs it, and nothing designed to be addictive (rule <span class="ref"><a href="rules.html#rule-43" aria-describedby="tip-15">43</a><span class="tip" role="tooltip" id="tip-15"><b>Rule 43.</b> Only if children might use it: use the safest settings by default. No profiling, location off, parental consent where the law needs it, and no addictive features.</span></span>).</li>
+</ul>
+<span class="pill" aria-hidden="true">05</span>
+<h2 id="does-it-use-ai">Does it use AI?</h2>
+<p>If yes, follow the points that fit your product:</p>
+<ul>
+<li>Label replies written by AI (rule <span class="ref"><a href="rules.html#rule-36a" aria-describedby="tip-16">36a</a><span class="tip" role="tooltip" id="tip-16"><b>Rule 36a.</b> Only if users chat with AI or read replies it writes: show a small &quot;AI&quot; label, unless that&#x27;s already obvious, for example on a &quot;Generate with AI&quot; button.</span></span>).</li>
+<li>If the AI has a human name, face or voice, say clearly that it's AI (rule <span class="ref"><a href="rules.html#rule-36b" aria-describedby="tip-17">36b</a><span class="tip" role="tooltip" id="tip-17"><b>Rule 36b.</b> Only if your AI has a human form, like a face, a human name or a voice: say clearly at the start that it&#x27;s AI, never let it claim to have feelings, and remind users during long chats.</span></span>).</li>
+<li>Label images, audio and video made by AI (rule <span class="ref"><a href="rules.html#rule-37" aria-describedby="tip-18">37</a><span class="tip" role="tooltip" id="tip-18"><b>Rule 37.</b> Only if your AI makes images, audio or video: label them with C2PA Content Credentials, a tag inside the file that shows AI made it.</span></span>).</li>
+<li>Treat everything the AI reads or writes as untrusted, and guard against known AI attacks (rule <span class="ref"><a href="rules.html#rule-38" aria-describedby="tip-19">38</a><span class="tip" role="tooltip" id="tip-19"><b>Rule 38.</b> Only if you use AI: treat everything that goes into the AI as untrusted, and guard against the risks in OWASP&#x27;s Top 10 for AI apps (the LLM Top 10).</span></span>).</li>
+<li>Give the AI as little power as possible. A person approves anything that spends money, sends messages or deletes things (rule <span class="ref"><a href="rules.html#rule-39" aria-describedby="tip-20">39</a><span class="tip" role="tooltip" id="tip-20"><b>Rule 39.</b> Only if your AI can take actions: give it as little power as possible, and have a person approve anything that spends money, sends messages or deletes things.</span></span>).</li>
+<li>A person checks AI decisions about money, health, jobs or legal matters (rule <span class="ref"><a href="rules.html#rule-40" aria-describedby="tip-21">40</a><span class="tip" role="tooltip" id="tip-21"><b>Rule 40.</b> Only if your AI&#x27;s answers affect money, health, jobs or legal matters: have a person check them.</span></span>).</li>
+<li>Don't track people's moods or use emotional pressure to keep them using it (rule <span class="ref"><a href="rules.html#rule-41" aria-describedby="tip-22">41</a><span class="tip" role="tooltip" id="tip-22"><b>Rule 41.</b> Only if you use AI: don&#x27;t track people&#x27;s moods, and don&#x27;t use emotional pressure to keep them using it.</span></span>).</li>
+<li>Try hard to make it misbehave before launch, so you find the problems first (rule <span class="ref"><a href="rules.html#rule-42" aria-describedby="tip-23">42</a><span class="tip" role="tooltip" id="tip-23"><b>Rule 42.</b> Only if you use AI: try hard to make it misbehave before launch and after any big change. This is called red-teaming.</span></span>).</li>
+</ul>
+<span class="pill" aria-hidden="true">06</span>
+<h2 id="does-it-take-payments-or-subscriptions">Does it take payments or subscriptions?</h2>
+<p>If yes:</p>
+<ul>
+<li>Never store card numbers yourself. Use a payment provider like Stripe or PayPal (rule <span class="ref"><a href="rules.html#rule-31" aria-describedby="tip-24">31</a><span class="tip" role="tooltip" id="tip-24"><b>Rule 31.</b> Only if you take payments: never store card details yourself. Use a payment provider.</span></span>).</li>
+<li>Write terms that make cancelling clear and easy (rule <span class="ref"><a href="rules.html#rule-45" aria-describedby="tip-25">45</a><span class="tip" role="tooltip" id="tip-25"><b>Rule 45.</b> Always. Publish an accessibility statement. Only if you hold personal data: publish a privacy notice. Only if you use cookies: publish a cookie policy. Only if you have accounts or payments: publish terms that explain clearly how to cancel.</span></span>).</li>
+</ul>
+<span class="pill" aria-hidden="true">07</span>
+<h2 id="can-users-post-content-images-or-messages">Can users post content, images or messages?</h2>
+<p>If yes:</p>
+<ul>
+<li>If you rank or recommend posts, reward helpful ones, not outrage (rule <span class="ref"><a href="rules.html#rule-11" aria-describedby="tip-26">11</a><span class="tip" role="tooltip" id="tip-26"><b>Rule 11.</b> Only if your product ranks or recommends posts: reward the helpful ones, not the ones that make people angry.</span></span>).</li>
+<li>Remove reported intimate images within 48 hours (rule <span class="ref"><a href="rules.html#rule-51" aria-describedby="tip-27">51</a><span class="tip" role="tooltip" id="tip-27"><b>Rule 51.</b> Only if you hold personal data: answer people&#x27;s requests about their data within a month. Only if users can post content: remove reported intimate images within 48 hours.</span></span>).</li>
+</ul>
+<span class="pill" aria-hidden="true">08</span>
+<h2 id="do-you-use-optional-cookies-pixels-or-tracking">Do you use optional cookies, pixels or tracking?</h2>
+<p>If yes:</p>
+<ul>
+<li>Follow the cookie points under the EU, UK and US questions above for the places your visitors come from.</li>
+<li>Check your cookies before every release (rule <span class="ref"><a href="rules.html#rule-33" aria-describedby="tip-28">33</a><span class="tip" role="tooltip" id="tip-28"><b>Rule 33.</b> Always. Before every release, run a security scan on the live site (DAST), an accessibility check and a dark pattern review. Only if users log in: also test that each type of user can only reach what they should. Only if you use tracking: also check your cookies.</span></span>).</li>
+<li>Publish a cookie policy (rule <span class="ref"><a href="rules.html#rule-45" aria-describedby="tip-29">45</a><span class="tip" role="tooltip" id="tip-29"><b>Rule 45.</b> Always. Publish an accessibility statement. Only if you hold personal data: publish a privacy notice. Only if you use cookies: publish a cookie policy. Only if you have accounts or payments: publish terms that explain clearly how to cancel.</span></span>).</li>
+</ul>
+<span class="pill" aria-hidden="true">09</span>
+<h2 id="is-it-a-mobile-app-or-software-people-install">Is it a mobile app or software people install?</h2>
+<p>If yes:</p>
+<ul>
+<li>Mobile apps also meet the mobile security standard (rule <span class="ref"><a href="rules.html#rule-22" aria-describedby="tip-30">22</a><span class="tip" role="tooltip" id="tip-30"><b>Rule 22.</b> Always. Meet level 1 of OWASP&#x27;s security checklist for apps (ASVS). Only if you hold personal, health or payment data: meet level 2. Only if it&#x27;s a mobile app: also meet OWASP&#x27;s mobile checklist (MASVS).</span></span>).</li>
+<li>Tell people how long you'll keep sending security updates (rule <span class="ref"><a href="rules.html#rule-47" aria-describedby="tip-31">47</a><span class="tip" role="tooltip" id="tip-31"><b>Rule 47.</b> Only if it&#x27;s an app or software people install, not just a website: say how long you&#x27;ll keep releasing security updates.</span></span>).</li>
+</ul>
+<span class="pill" aria-hidden="true">10</span>
+<h2 id="do-users-log-in">Do users log in?</h2>
+<p>If yes:</p>
+<ul>
+<li>Set privacy options to the most private choice by default (rule <span class="ref"><a href="rules.html#rule-13" aria-describedby="tip-32">13</a><span class="tip" role="tooltip" id="tip-32"><b>Rule 13.</b> Only if users have accounts: set every privacy option to the most private choice by default.</span></span>).</li>
+<li>Check on the server that each person is allowed to do what they ask, every time (rule <span class="ref"><a href="rules.html#rule-23" aria-describedby="tip-33">23</a><span class="tip" role="tooltip" id="tip-33"><b>Rule 23.</b> Only if users log in: check on the server, every time, that the person is allowed to do what they&#x27;re asking. When in doubt, the answer is no.</span></span>).</li>
+<li>Test that each type of user can only reach what they should (rule <span class="ref"><a href="rules.html#rule-33" aria-describedby="tip-34">33</a><span class="tip" role="tooltip" id="tip-34"><b>Rule 33.</b> Always. Before every release, run a security scan on the live site (DAST), an accessibility check and a dark pattern review. Only if users log in: also test that each type of user can only reach what they should. Only if you use tracking: also check your cookies.</span></span>).</li>
+<li>Write terms that make closing an account clear and easy (rule <span class="ref"><a href="rules.html#rule-45" aria-describedby="tip-35">45</a><span class="tip" role="tooltip" id="tip-35"><b>Rule 45.</b> Always. Publish an accessibility statement. Only if you hold personal data: publish a privacy notice. Only if you use cookies: publish a cookie policy. Only if you have accounts or payments: publish terms that explain clearly how to cancel.</span></span>).</li>
+</ul>
+<span class="pill" aria-hidden="true">11</span>
+<h2 id="also-check-for-these">Also check for these</h2>
+<p>Some rules depend on features rather than the questions above. If your product has any of these, add them too:</p>
+<ul>
+<li>Notifications: keep them off by default, except essential ones (rule <span class="ref"><a href="rules.html#rule-6" aria-describedby="tip-36">6</a><span class="tip" role="tooltip" id="tip-36"><b>Rule 6.</b> Only if your product sends notifications: keep them off by default, except essential ones like security alerts or booking reminders. Never use red badges to push marketing.</span></span>).</li>
+<li>Video or audio: no autoplay (rule <span class="ref"><a href="rules.html#rule-7" aria-describedby="tip-37">7</a><span class="tip" role="tooltip" id="tip-37"><b>Rule 7.</b> Only if your product plays video or audio: don&#x27;t play it automatically unless the user turns that on.</span></span>).</li>
+<li>A feed: add natural stopping points (rule <span class="ref"><a href="rules.html#rule-8" aria-describedby="tip-38">8</a><span class="tip" role="tooltip" id="tip-38"><b>Rule 8.</b> Only if your product has a feed: give it natural stopping points, like &quot;You&#x27;re all caught up&quot;. Never use endless scrolling for anyone under 18.</span></span>).</li>
+<li>A big launch, or a product that's been live a year: get a security test by an expert (rule <span class="ref"><a href="rules.html#rule-34" aria-describedby="tip-39">34</a><span class="tip" role="tooltip" id="tip-39"><b>Rule 34.</b> Only if it&#x27;s a big launch, or the product has been live for a year: get a penetration test, where an expert tries to break in. Also review your threat model and practise restoring from a backup.</span></span>).</li>
+<li>Points, badges or rewards: make them earned and predictable (rule <span class="ref"><a href="rules.html#rule-57" aria-describedby="tip-40">57</a><span class="tip" role="tooltip" id="tip-40"><b>Rule 57.</b> Only if your product has rewards, points or badges: make rewards earned and predictable. No random rewards designed to keep people hooked.</span></span>).</li>
+<li>Invites: people choose who to invite, one by one (rule <span class="ref"><a href="rules.html#rule-58" aria-describedby="tip-41">58</a><span class="tip" role="tooltip" id="tip-41"><b>Rule 58.</b> Only if users can invite others: let them choose each person. Never send automatic invites from uploaded contact lists, and limit how many invites can be sent.</span></span>).</li>
+<li>Something people use every day: give them quiet hours, limits and snooze (rule <span class="ref"><a href="rules.html#rule-59" aria-describedby="tip-42">59</a><span class="tip" role="tooltip" id="tip-42"><b>Rule 59.</b> Only if people use your product regularly: give them controls like quiet hours, a daily limit, snooze and optional usage summaries.</span></span>).</li>
+<li>Numbers or reviews on screen: only real ones, no fake urgency (rule <span class="ref"><a href="rules.html#rule-60" aria-describedby="tip-43">60</a><span class="tip" role="tooltip" id="tip-43"><b>Rule 60.</b> Only if you show numbers or reviews: show only real, current figures and genuine reviews. No fake urgency like &quot;Only 2 left!&quot; unless it&#x27;s true.</span></span>).</li>
+</ul>
+<span class="pill" aria-hidden="true">12</span>
+<h2 id="what-to-do-with-your-answers">What to do with your answers</h2>
+<p>Write them down in the <a href="template.html">project template</a>, with the list of rules that apply.</p>
+<p>Answer the questions again whenever the product gets a big new feature, such as accounts, payments or AI.</p>
+</main>
+<footer class="foot">
+  <div class="inner">
+    <a class="wordmark" href="index.html">Humane Dev Rules</a>
+    <p>By abuturab840. Free to reuse under <a href="https://github.com/abuturab840/humane-dev-rules/blob/main/LICENSE">CC BY 4.0</a>. Not legal advice. Last reviewed November 2026.</p>
+    <p><a href="https://github.com/abuturab840/humane-dev-rules">View on GitHub</a> &middot; <a href="contributing.html">Contribute</a> &middot; <a href="accessibility.html">Accessibility</a> &middot; <a href="https://github.com/abuturab840/humane-dev-rules/issues">Report a problem</a></p>
+    <p>This site uses no cookies and no tracking.</p>
+  </div>
+</footer>
+</body>
+</html>
